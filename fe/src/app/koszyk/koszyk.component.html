@@ -1,0 +1,20 @@
+Koszyk: {{koszyk.length}}
+<table class="table">
+    <thead >
+        <td>Nazwa</td>
+        <td>Opis</td>
+        <td>Cena</td>
+        <td>ID </td>
+        <td> </td>
+      </thead>
+    <tbody>
+      <tr *ngFor="let artykul of koszyk">
+        <td>{{artykul.nazwa}}</td>
+        <td>{{artykul.opis}}</td>
+        <td>{{artykul.cena}}</td>
+        <td>{{artykul.id}}</td>
+        <td><img src="{{artykul.src}}"></td>
+      </tr>
+    </tbody>
+  </table>
+

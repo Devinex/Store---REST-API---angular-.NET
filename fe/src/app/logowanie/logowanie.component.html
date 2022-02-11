@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm" class="my-form">
+    <div class="d-flex flex-column">
+        <div class="d-flex justify-content-around">
+            <mat-form-field>
+                <mat-label>Login</mat-label>
+                <input matInput placeholder="Login" [(ngModel)]="login.login" name="login" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Hasło</mat-label>
+                <input matInput placeholder="Hasło" [(ngModel)]="login.haslo" name="haslo" type="password" required>
+            </mat-form-field>
+        </div>
+        <div class="d-flex flex-row-reverse">
+            <input class="btn btn-success" type="submit" value="Zaloguj" [disabled]="form.invalid">
+        </div>
+    </div>
+</form>
+
+<div appCzerwonyTekst>
+    {{blad}}
+</div>

@@ -1,0 +1,22 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+    <div>
+        <label for="nazwa">Nazwa</label>
+        <input id="nazwa" name="nazwa" formControlName="nazwa" required minlength="2" maxlength="100">
+    </div>
+    <div>
+        <label for="opis">Opis</label>
+        <input id="opis" name="opis" formControlName="opis"  maxlength="300">
+    </div>
+    <div>
+        <label for="cena">Cena</label>
+        <input id="cena" name="cena" formControlName="cena" type="number" >
+    </div>
+    <div>
+        <label for="src">sciezka zdj</label>
+        <input id="src" name="src" formControlName="src" >
+    </div>
+    <div>
+        <button type="reset">Reset</button>
+        <button type="submit" [disabled]="form.invalid">Zatwierdź</button>
+    </div>
+</form>

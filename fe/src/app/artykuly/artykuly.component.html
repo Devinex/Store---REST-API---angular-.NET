@@ -1,0 +1,15 @@
+<div>
+    <button (click)="onWyswietlChange()">{{(wyswietlArtykuly ? 'Ukryj artykuly' : 'Wyświetl artykuly')}}</button>
+    <a routerLink="nowy">Nowy artykuł</a>
+</div>
+
+<div *ngIf="wyswietlArtykuly">
+    <div>
+        <label>Strona</label> <input type="number" [(ngModel)]="stronnicowanie.strona">
+        <label>Ilość</label> <input type="number" [(ngModel)]="stronnicowanie.ilosc">
+        <button (click)="pobierz()">Wybierz</button>
+    </div>
+    <span *ngIf="artykuly.length == 0">Wczytywanie danych...</span>
+    <app-artykul *ngFor="let o of artykuly" [artykul]="o" ></app-artykul>
+    
+</div>

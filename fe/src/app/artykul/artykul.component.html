@@ -1,0 +1,13 @@
+
+
+
+<p-card styleClass="m-3" appNiebieskiTekst>
+  <p>Nazwa: {{artykul.nazwa}}</p>
+  <p>Opis: {{artykul.opis}}</p>
+  <p>Cena: {{artykul.cena}}</p>
+  <p><img src="{{artykul.src}}"></p>
+  <button class="mx-2" (click)="onDodajDoKoszyka(artykul)">Dodaj do koszyka</button>
+  <button (click)="onEdycja()">Edytuj</button>
+  <button  (click)="onWybierz()">Wybierz</button>
+
+</p-card>

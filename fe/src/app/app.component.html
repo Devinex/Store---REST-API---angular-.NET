@@ -1,0 +1,31 @@
+<div class=".container">
+  
+    <div class="row">
+      <div class="fw-bold text-primary text-center col">
+        <h2 appZoltyTekst>{{title}}</h2>
+      </div>
+      <div class="col-2" *ngIf="czyZalogowany()"><button class="btn btn-sm btn-danger" (click)="wyloguj()">Wyloguj</button></div>
+    </div>
+   
+  
+ </div>
+
+
+<router-outlet></router-outlet>
+
+
+ <div  *ngIf="czyZalogowany()"  class="fw-bold text-primary text-center ">
+
+        Koszyk: {{koszyki.length}}
+      
+      <button class= "col-2" (click)="onWyczyscKoszyk()">Wyczysc koszyk</button>
+       <div >
+      <a class= "col-2" routerLink="">Powrót na główną stronę</a>
+   </div>
+   </div>
+  
+
+ 
+ 
+
+
